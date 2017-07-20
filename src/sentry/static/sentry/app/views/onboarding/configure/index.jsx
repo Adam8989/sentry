@@ -16,7 +16,7 @@ const Configure = React.createClass({
 
   componentWillMount() {
     const {platform} = this.props.params;
-    //TODO(maxbittker) redirect if platform is not known.
+    //redirect if platform is not known.
     if (!platform || platform === 'other') {
       this.redirectToNeutralDocs();
     }

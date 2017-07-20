@@ -44,12 +44,9 @@ describe('Configure should render correctly', function() {
         () => {}
       );
 
-      component.forceUpdate();
       wrapper.update();
       expect(toJson(wrapper)).toMatchSnapshot();
       expect(handleSubmitStub.callCount).toEqual(0);
-
-      // expect(Configure.prototype.redirectToNeutralDocs.calledOnce).toBeFalsy();
     });
 
     it('should redirect to if no matching platform', function() {

@@ -1,7 +1,7 @@
 import React from 'react';
 import ListLink from '../../../components/listLink';
 import classnames from 'classnames';
-// import {platforms} from '../../../../../../integration-docs/_platforms.json';
+
 import {flattenedPlatforms, categoryLists} from '../utils';
 import PlatformCard from './platformCard';
 
@@ -12,7 +12,7 @@ const categoryList = Object.keys(categoryLists).concat('All');
 
 const PlatformPicker = React.createClass({
   propTypes: {
-    setPlatform: React.PropTypes.func,
+    setPlatform: React.PropTypes.func.isRequired,
     platform: React.PropTypes.string
   },
 
@@ -52,7 +52,7 @@ const PlatformPicker = React.createClass({
               className={classnames({
                 selected: this.props.platform === platform.id
               })}
-              key={idx}
+              key={platform.id}
               onClick={() => {
                 this.props.setPlatform(platform.id);
               }}

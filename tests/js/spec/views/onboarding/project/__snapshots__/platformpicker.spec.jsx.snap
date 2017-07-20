@@ -82,57 +82,22 @@ exports[`PlatformPicker render() should only render Mobile platforms under Mobil
     <PlatformCard
       className=""
       onClick={[Function]}
-      platform="csharp"
+      platform="java-android"
     />
     <PlatformCard
       className=""
       onClick={[Function]}
-      platform="java"
+      platform="objc"
     />
     <PlatformCard
       className=""
       onClick={[Function]}
-      platform="javascript"
+      platform="cocoa"
     />
     <PlatformCard
       className=""
       onClick={[Function]}
-      platform="javascript-react"
-    />
-    <PlatformCard
-      className=""
-      onClick={[Function]}
-      platform="node-express"
-    />
-    <PlatformCard
-      className=""
-      onClick={[Function]}
-      platform="php-laravel"
-    />
-    <PlatformCard
-      className=""
-      onClick={[Function]}
-      platform="php-symfony2"
-    />
-    <PlatformCard
-      className=""
-      onClick={[Function]}
-      platform="python-django"
-    />
-    <PlatformCard
-      className=""
-      onClick={[Function]}
-      platform="python-flask"
-    />
-    <PlatformCard
-      className=""
-      onClick={[Function]}
-      platform="python"
-    />
-    <PlatformCard
-      className=""
-      onClick={[Function]}
-      platform="ruby-rails"
+      platform="swift"
     />
   </ul>
 </div>
@@ -428,6 +393,7 @@ exports[`PlatformPicker render() should update State.tab onClick when particular
       "setPlatform": "",
     }
   }
+  setPlatform={[Function]}
 >
   <div
     className="platform-picker"

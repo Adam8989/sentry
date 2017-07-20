@@ -1,5 +1,5 @@
 import React from 'react';
-// import {platforms} from '../../../../../../integration-docs/_platforms.json';
+
 import {flattenedPlatforms} from '../utils';
 import PlatformiconTile from './platformiconTile';
 import classnames from 'classnames';
