@@ -45,19 +45,22 @@ describe('PlatformPicker', function() {
       expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('should render renderPlatformList with Python when filtered with P', function() {
+    it('should render renderPlatformList with Python when filtered with py', function() {
       let props = {
         ...baseProps
       };
 
       let wrapper = shallow(<PlatformPicker {...props} />);
-      expect(toJson(wrapper)).toMatchSnapshot();
-      wrapper.setState({tab: 'All', filter: 'p'});
+
+      wrapper.setState({tab: 'All', filter: 'py'});
+
       let filteredPlatforms = wrapper
         .find('PlatformCard')
         .map(node => node.prop('platform'));
       expect(filteredPlatforms).not.toContain('java');
       expect(filteredPlatforms).toContain('python-flask');
+
+      expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render renderPlatformList with community SDKs message if platform not found', function() {
@@ -67,6 +70,7 @@ describe('PlatformPicker', function() {
 
       let wrapper = shallow(<PlatformPicker {...props} />);
       wrapper.setState({filter: 'aaaaaa'});
+
       expect(wrapper.text()).toContain('Not finding your platform?');
 
       expect(toJson(wrapper)).toMatchSnapshot();
@@ -91,6 +95,7 @@ describe('PlatformPicker', function() {
       expect(wrapper.state().tab).not.toBe('All');
 
       testListLink.simulate('click');
+
       expect(wrapper.state().tab).not.toBe('Popular');
       expect(wrapper.state().tab).toBe('All');
 
