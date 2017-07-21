@@ -2,6 +2,9 @@
 
 .onboarding-container {
   margin-left: @onboarding-sidebar-width - @sidebar-width;
+  @media(max-width: @screen-sm-max) {
+      margin-left: 0;
+  }
 
   .step-container{
     padding: 0 40px;
@@ -94,6 +97,11 @@
     background-color: #3B3247;
     background-size: 400px;
 
+    @media(max-width: @screen-sm-max) {
+      display: none;
+    }
+
+
     .sentry-flag {
       font-size: 24px;
       line-height: 1;
@@ -172,6 +180,10 @@
       position: relative;
       top: -4px;
 
+      @media(max-width: @screen-sm-max) {
+        display: none;
+      }
+
       .icon-search {
         color: @30;
         font-size: 12px;
@@ -203,6 +215,10 @@
         padding: 0 0 14px;
         cursor: pointer;
         border-radius: 4px;
+
+        @media(max-width: @screen-sm-max) {
+          width: 70px;
+        }
 
         &:hover {
           background: #f7f5fa;
